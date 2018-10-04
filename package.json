@@ -1,0 +1,22 @@
+{
+  "name": "diw_one_page_ver3",
+  "version": "1.0.0",
+  "description": "diw_one_page_ver3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igoruze86/diw_one_page_ver3.git"
+  },
+  "author": "Igor Uzelac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igoruze86/diw_one_page_ver3/issues"
+  },
+  "homepage": "https://github.com/igoruze86/diw_one_page_ver3#readme",
+  "devDependencies": {
+    "webpack": "^4.20.2"
+  }
+}
