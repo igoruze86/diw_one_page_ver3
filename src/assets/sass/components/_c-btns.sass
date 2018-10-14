@@ -1,0 +1,55 @@
+.c-btn-apply
+  display: none
+
+
+.c-btn-load
+  position: relative
+  background-color: $alto
+  color: $mineShaft
+  border-radius: 5px
+  font-weight: 300
+  letter-spacing: 1.8px
+  padding: 5vw 6vw
+  font-size: 4.4vw
+  outline: none
+  border: none
+  transition: 0.4s
+  top: 0px
+
+  &:hover
+    background: $mineShaft
+    color: $alto
+    box-shadow: 0px 5px 10px lighten($mineShaft, 40%)
+    transition: 0.4s
+    top: -5px
+
+  &:active
+    top: 0px
+    box-shadow: 0px 0px 0px lighten($mineShaft, 40%)
+    transition: 0.2s
+    background-color: $alto
+    color: $mineShaft
+
+
+.c-btn-submit
+  position: relative
+  display: block
+  width: 100%
+  color: $white
+  font-size: 3.5vw
+  background-color: $crimson
+  border: none
+  outline-style: none
+  padding: 3.5vw
+  transition: 0.4s
+
+  &:hover
+    transition: 0.4s
+    background-color: darken($crimson, 10%)
+    box-shadow: 0px 10px 20px lighten($mineShaft, 40%)
+    
+  &:active
+    transition: 0.4s
+    background-color: $crimson
+    margin: 0 auto
+    box-shadow: 0px 0px 0px lighten($mineShaft, 40%)

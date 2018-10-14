@@ -1,0 +1,100 @@
+.c-form
+  width: 100%
+  display: block
+  background-color: $concrete
+
+  &__block1
+    position: relative
+    display: block
+    width: 100%
+    border-bottom: solid 2px $dustyGray
+    padding: 5vw 10vw 10vw 10vw
+
+  &__block2
+    display: block
+    padding: 5vw 10vw 5vw 10vw
+
+
+.c-form__input
+  width: 100%
+  border: none
+  border-bottom: 2px solid $dustyGray
+  background-color: $concrete
+  outline-style: none
+  margin-bottom: 10vw
+  margin-top: 2vw
+  font-size: 3.5vw
+
+  &::placeholder
+    color: black
+
+  &-label
+    font-weight: 300
+    font-style: italic
+    font-size: 3vw
+    color: $dustyGray
+
+
+.c-form__input-label-checkbox
+  display: inline-block
+  position: relative
+  margin-left: 9vw
+  font-size: 3.5vw
+  letter-spacing: 0.7px
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  cursor: pointer
+
+
+.c-form-input__checkbox
+  position: absolute
+  opacity: 0
+  top: -1vw
+  left: -9vw
+
+  &:checked ~ .c-form__checkmark
+    background-color: $crimson
+
+  &:checked ~ .c-form__checkmark::after
+    display: block
+
+
+.c-form__checkmark
+  position: absolute
+  top: -1vw
+  left: -9vw
+  margin: 1vw 1vw
+  height: 4.2vw
+  width: 4.2vw
+  border: 1.5px solid $crimson
+  border-radius: 2px
+  cursor: pointer
+
+  &::after
+    content: ""
+    position: absolute
+    display: none
+    left: 1.22vw
+    top: 0.1vw
+    width: 1vw
+    height: 2vw
+    border: solid white
+    border-width: 0 1.8px 1.8px 0
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    transform: rotate(45deg)
+
+
+.c-form__input-msg
+  display: block
+  width: 100%
+  background-color: $concrete
+  border: none
+  margin-top: 5vw
+  font-size: 3.5vw
+  outline-style: none
+
+  &::placeholder
+    color: black
