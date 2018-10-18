@@ -1,40 +1,57 @@
 .b-footer
+  position: relative
   display: block
   width: 100%
   position: relative
   background-color: $mineShaft
 
-  &-container
+  &__social-container
     text-align: center
     display: block
     padding: 5vw 5vw
-
-  &__icon-container
-    display: inline-block
-
-  &__webpage-container
-    padding-top: 5vw
-    color: #5f5f5f
-    font-size: 4.1vw
-    letter-spacing: 0.6px
-    &:hover
-      opacity: 0.7
+    p
+      padding-top: 5vw
+      color: $scorpion
+      font-size: 4.1vw
+      letter-spacing: 0.6px
+      &:hover
+        opacity: 0.7
 
   &__copyright-container
     display: block
     background-color: $codGray
-    color: $scorpion
+    color: darken($scorpion, 10%)
     padding-top: 4.6vw
     padding-bottom: 4.6vw
     text-align: center
 
-  &__copyrigtxt1
+  &__copyrigtxt
     margin: 0 auto
-    font-size: 14px
+    font-size: 8px
     letter-spacing: 0.4px
 
-  &__copyrigtxt2
-    display: none
-    font-size: 1vw
-    letter-spacing: 1.2px
-    font-weight: 500
+@include breakpoint(tabletOnly)
+  .b-footer
+    display: block
+    width: 100%
+    background-color: $codGray
+    padding: 0 7vw
+
+    &__social-container
+      position: absolute
+      display: inline-block
+      top: 50%
+      right: 0
+      margin-right: 7vw
+      transform: translate(0,-50%)
+      padding: 0
+      p
+        display: inline-block
+        font-size: 1.3vw
+        margin-left: 2vw
+        padding: 0
+
+    &__copyright-container
+      display: inline-block
+      padding: 3vw 0vw
+      text-align: left

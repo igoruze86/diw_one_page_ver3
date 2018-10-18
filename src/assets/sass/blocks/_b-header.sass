@@ -9,19 +9,25 @@
     display: none
     width: 100%
 
+@include breakpoint(tabletOnly)
+  .b-header
+    &-banner
+      display: none
+    &-banner-desk
+      display: block
+
 .b-header-title
   display: block
   text-align: center
   color: $mineShaft
   position: absolute
-  top: 53.125VW
-  margin: 0 auto
+  top: 48.125VW
   z-index: 10
   padding: 20px 20px
   h1
     width: 100%
     font-size: 18.4vw
-    font-weight: 500
+    font-weight: $bold
     line-height: 1
     letter-spacing: 0.1vw
   img
@@ -31,11 +37,24 @@
     display: block
     font-size: 5.9vw
     margin-top: 15.6vw
-    font-weight: 400
+    font-weight: $regular
     letter-spacing: 0.3vw
   p
     display: none
     font-size: 2.5vw
     margin-top: 5.4vw
-    font-weight: 300
+    font-weight: $light
     letter-spacing: -0.3px
+
+@include breakpoint(tabletOnly)
+  .b-header-title
+    top: 12VW
+    left: 0
+    right: 0
+    padding: 20px 20px
+    h1
+      font-size: 5vw
+    h2
+      display: none
+    p
+      display: block

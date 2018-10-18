@@ -1,6 +1,6 @@
 .c-lang-ls-noborder
     display: block
-    font-weight: 300
+    font-weight: $light
     font-size: 4.4vw
     margin: 3vw 0
     color: $crimson
@@ -8,20 +8,33 @@
       display: inline-block
       margin-right: 2.5vw
 
+@include breakpoint(tabletOnly)
+  .c-lang-ls-noborder
+    display: none
+
 .c-lang-ls-border
   display: none
-  margin: 0 3vw
-  font-weight: 300
+  font-weight: $light
   font-size: 1.3vw
+  margin-top: 2vw
   li
     display: inline-block
     border-radius: 2px
     padding: 1vw 2vw
 
+
   &--red
-    color: $crimson
-    border: solid 1px $silver
+    li
+      color: $crimson
+      border: solid 1px $silver
+      margin-right: 1vw
 
   &--white
-    color: $gallery
-    border: solid 1px $gallery
+    li
+      color: $gallery
+      border: solid 1px $gallery
+      margin-right: 1vw
+
+@include breakpoint(tabletOnly)
+  .c-lang-ls-border
+    display: inline-block

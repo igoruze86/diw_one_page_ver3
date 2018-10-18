@@ -1,3 +1,16 @@
+nav
+  display: block
+  width: 100%
+  height: 60px
+  background: $whiteRock
+  position: fixed
+  z-index: 10
+
+@include breakpoint(tabletOnly)
+  nav
+    background: $whiteRock2
+
+
 .b-nav
   display: block
   margin: 0 auto
@@ -7,7 +20,7 @@
   position: fixed
   left: 0
   right: 0
-  background-color: $whiteRock
+  background: $whiteRock
   max-width: 1300px
   z-index: 20
   ul
@@ -17,3 +30,13 @@
     li
       display: inline-block
       margin-left: 30px
+
+@include breakpoint (tabletOnly)
+  .b-nav
+    padding: 10px 40px
+    background: $whiteRock2
+
+@include breakpoint(desktopOnly)
+  .b-nav
+    ul
+      display: inline-block

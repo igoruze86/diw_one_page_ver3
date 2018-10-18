@@ -3,43 +3,131 @@
   float: right
   margin-left: 8vw
 
+@include breakpoint(tabletOnly)
+  .c-icons-nav-fbico
+    width: 10px
+    margin-left: 2vw
 
 .c-icons-nav-twittico
   float: right
   width: 7.2vw
 
+@include breakpoint(tabletOnly)
+  .c-icons-nav-twittico
+    width: 23px
+
 
 .c-icons-logo
   width: 138px
   display: inline-block
+  transition: all 0.3s ease-in-out
+
+.hide
+  opacity: 0
+  transition: 0.3s
+
+@include breakpoint(desktopOnly)
+  .hide
+    opacity: 1
+
+.c-icons-logo-icon
+  position: absolute
+  left: 121px
+  width: 37px
+  opacity: 0
+  transition: all 0.5s ease-in-out
+
+.show
+  opacity: 1
+  transform: translateX(-101px)
+
+@include breakpoint(desktopOnly)
+  .show
+    opacity: 0
+
 
 
 .c-icons-burger
-  display: block
-  width: 25px
-  padding: 10px 0
+  position: relative
+  width: 30px
+  height: 24px
   float: right
+  margin-top: 8px
+  &-line1
+    position: absolute
+    height: 3px
+    width: 100%
+    background: lighten($mineShaft, 10%)
+    top: 0%
+    transition: all ease 0.2s
+  &-line2
+    position: absolute
+    height: 3px
+    width: 100%
+    background: lighten($mineShaft, 10%)
+    top: 42%
+    transition: all ease 0.2s
+  &-line3
+    position: absolute
+    height: 3px
+    width: 100%
+    background: lighten($mineShaft, 10%)
+    top: 85%
+    transition: all ease 0.2s
+
+@include breakpoint(desktopOnly)
+  .c-icons-burger
+    display: none
+
+
+.c-icons-burger-close .c-icons-burger-line1
+  transform: rotate(45deg)
+  top: 42%
+
+
+.c-icons-burger-close .c-icons-burger-line2
+  transform: rotate(-45deg)
+  top: 42%
+
+
+.c-icons-burger-close .c-icons-burger-line3
+  transform: rotate(-45deg)
+  top: 42%
 
 
 .c-icons-description
-  width: 88px
+  width: 75px
   display: block
-  padding: 20px 0
+  padding: 11.4vw 0vw
   margin: 0 auto
+
+@include breakpoint (tabletOnly)
+  .c-icons-description
+    padding: 2.5vw 0vw
+    width: 55px
 
 
 .c-icons-gray-dash
   display: block
-  padding: 20px 0
+  padding: 9.1vw 0vw
   margin: 0 auto
 
+@include breakpoint (tabletOnly)
+  .c-icons-gray-dash
+    padding: 2.5vw 0vw
 
 .c-icons-red-dash
     display: block
-    padding: 6.3vw 0
+    padding: 10vw 0
 
     &--center
       margin: 0 auto
+
+@include breakpoint(tabletOnly)
+  .c-icons-red-dash
+    padding: 3vw 0vw
+    &--center
+      padding: 4vw 0vw
 
 
 .c-icons-cp-red-dash
@@ -47,12 +135,22 @@
   padding: 3vw 0
   margin: 0 auto
 
+@include breakpoint (tabletOnly)
+  .c-icons-cp-red-dash
+    margin: 0 0
+    padding: 2vw 0vw
 
+// -----------------------------------------------
 .c-icons-twitt-color
   margin-right: 2.5vw
 
   &:hover
     opacity: 0.7
+
+@include breakpoint(tabletOnly)
+  .c-icons-twitt-color
+    width: 55px
+    margin-right: 1vw
 
 
 .c-icons-fb-color
@@ -61,25 +159,69 @@
   &:hover
     opacity: 0.7
 
+@include breakpoint(tabletOnly)
+  .c-icons-fb-color
+    width: 55px
+    margin-left: 1vw
+// -----------------------------------------------
+
+
+.c-icons-cp-twitt-color
+  margin-right: 1.5vw
+  width: 25px
+
+  &:hover
+    opacity: 0.7
+
+@include breakpoint(tabletOnly)
+  .c-icons-cp-twitt-color
+    margin-right: 0.5vw
+
+
+.c-icons-cp-fb-color
+  margin-left: 1.5vw
+  width: 25px
+
+  &:hover
+    opacity: 0.7
+
+@include breakpoint(tabletOnly)
+  .c-icons-cp-fb-color
+    margin-left: 0.5vw
+
 
 .c-icons-footer-in
-  width: 25px
+  display: inline-block
+  height: 20px
   margin-right: 3vw
 
   &:hover
     opacity: 0.7
 
+@include breakpoint(tabletOnly)
+  .c-icons-footer-in
+    height: 15px
+    margin-right: 1vw
+    vertical-align: middle
+
 
 .c-icons-footer-twitt
-  width: 25px
+  display: inline-block
+  height: 20px
   margin-left: 3vw
 
   &:hover
     opacity: 0.7
 
+@include breakpoint(tabletOnly)
+  .c-icons-footer-twitt
+    height: 15px
+    margin-left: 1vw
+    vertical-align: middle
+
 
 .c-icons-twitt-bw
-  width: 20px
+  width: 28px
   margin: 0 1vw
 
   &:hover
@@ -87,7 +229,7 @@
 
 
 .c-icons-fb-bw
-  width: 20px
+  width: 28px
   margin: 0 1vw
 
   &:hover

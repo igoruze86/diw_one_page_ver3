@@ -12,8 +12,27 @@
 
   &__block2
     display: block
-    padding: 5vw 10vw 5vw 10vw
+    padding: 5vw 10vw
 
+@include breakpoint (tabletOnly)
+  .c-form
+    display: flex
+
+    form
+      position: relative
+
+    &__block1
+      display: inline-block
+      width: 50%
+      padding: 2.5vw 5vw 5vw 5vw
+      border-bottom: none
+      border-right: solid 2px $dustyGray
+      vertical-align: top
+
+    &__block2
+      display: inline-block
+      width: 50%
+      padding: 2.5vw 5vw
 
 .c-form__input
   width: 100%
@@ -23,23 +42,36 @@
   outline-style: none
   margin-bottom: 10vw
   margin-top: 2vw
-  font-size: 3.5vw
+  font-size: 4.7vw
 
   &::placeholder
     color: black
 
   &-label
-    font-weight: 300
+    font-weight: $light
     font-style: italic
-    font-size: 3vw
+    font-size: 4.7vw
     color: $dustyGray
+
+@include breakpoint (tabletOnly)
+  .c-form__input
+    border-bottom: 1px solid $dustyGray
+    margin-bottom: 5vw
+    margin-top: 1vw
+    font-size: 1.6vw
+
+    &::placeholder
+      font-size: 1.6vw
+
+    &-label
+      font-size: 1.6vw
 
 
 .c-form__input-label-checkbox
   display: inline-block
   position: relative
   margin-left: 9vw
-  font-size: 3.5vw
+  font-size: 4.7vw
   letter-spacing: 0.7px
   -webkit-user-select: none
   -moz-user-select: none
@@ -47,11 +79,16 @@
   user-select: none
   cursor: pointer
 
+@include breakpoint (tabletOnly)
+  .c-form__input-label-checkbox
+    margin-left: 3.5vw
+    font-size: 1.8vw
 
-.c-form-input__checkbox
+
+.c-form__input-checkbox
   position: absolute
   opacity: 0
-  top: -1vw
+  top: -0.5vw
   left: -9vw
 
   &:checked ~ .c-form__checkmark
@@ -60,10 +97,15 @@
   &:checked ~ .c-form__checkmark::after
     display: block
 
+@include breakpoint (tabletOnly)
+  .c-form__input-checkbox
+    top: -0.3vw
+    left: -4vw
+
 
 .c-form__checkmark
   position: absolute
-  top: -1vw
+  top: -0.5vw
   left: -9vw
   margin: 1vw 1vw
   height: 4.2vw
@@ -86,6 +128,21 @@
     -ms-transform: rotate(45deg)
     transform: rotate(45deg)
 
+@include breakpoint (tabletOnly)
+  .c-form__checkmark
+    top: -0.3vw
+    left: -4vw
+    margin: 0.5vw 0.5vw
+    height: 2vw
+    width: 2vw
+    border: 1px solid $crimson
+
+    &::after
+      left: 0.53vw
+      top: -0.08vw
+      width: 0.5vw
+      height: 1.2vw
+
 
 .c-form__input-msg
   display: block
@@ -93,8 +150,13 @@
   background-color: $concrete
   border: none
   margin-top: 5vw
-  font-size: 3.5vw
+  font-size: 4.7vw
   outline-style: none
 
   &::placeholder
     color: black
+
+@include breakpoint (tabletOnly)
+  .c-form__input-msg
+    margin-top: 2vw
+    font-size: 1.6vw

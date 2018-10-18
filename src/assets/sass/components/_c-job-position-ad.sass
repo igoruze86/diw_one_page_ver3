@@ -2,20 +2,35 @@
   width: 100%
   display: block
   text-align: left
-  padding: 5vw 5vw
+  padding: 7vw 4vw
   p
-    font-weight: 300
+    font-weight: $light
     color: $mineShaft
     font-size: 4.7vw
     letter-spacing: 0.1px
     line-height: 1.4
-    max-width: 80vw
 
   &--bg1
-    background-color: $pampas
+    background: $pampas
 
   &--bg2
-    background-color: inherit
+    background: inherit
 
-#pm-txt
-  max-width: 100%
+@include breakpoint(tabletOnly)
+  .c-job-position-ad
+    position: relative
+    padding: 4vw 9vw
+    p
+      font-weight: $light
+      font-size: 1.6vw
+      line-height: 1.7
+      letter-spacing: 0.9px
+      max-width: 45.5vw
+
+    &--bg1
+      background: inherit
+
+    &--bg2
+      background: $mineShaft
+      p
+        color: $gallery

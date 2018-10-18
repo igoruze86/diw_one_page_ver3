@@ -1,6 +1,6 @@
 .b-job-req
   ul
-    font-weight: 300
+    font-weight: $light
     color: $mineShaft
     font-size: 4.7vw
     letter-spacing: .1px
@@ -18,3 +18,23 @@
 
 #italic
   font-style: italic
+
+@include breakpoint (tabletOnly)
+  .b-job-req
+    ul
+      font-size: 1.8vw
+      line-height: 1
+      padding: 0vw 0vw 2vw 4vw
+      li
+        padding: 1vw 0
+        line-height: 1.2
+    p
+      padding-top: 4vw
+      font-size: 1.8vw
+      letter-spacing: 1px
+      line-height: 1.5
+      font-weight: $light
+
+@include breakpoint (tabletOnly)
+  #italic
+    padding-top: 0vw

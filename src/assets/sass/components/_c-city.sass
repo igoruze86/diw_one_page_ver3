@@ -1,9 +1,7 @@
 .c-city-ls
   display: block
   width: 100%
-  margin: 0 auto
-  text-align: left
-  padding: 8vw 0
+  padding: 10vw 0vw 6vw 0vw
 
   &-pin
     display: inline-block
@@ -14,7 +12,7 @@
   h3
     display: inline-block
     color: $concrete
-    font-weight: 300
+    font-weight: $light
     font-size: 5.2vw
 
   p
@@ -24,16 +22,46 @@
     margin-top: 4vw
     line-height: 1.5
 
+@include breakpoint(tabletOnly)
+  .c-city-ls
+    display: inline-block
+    width: 33.33%
+    vertical-align: top
+    padding: 0
+    margin-left: 6vw
+
+    &-pin
+      margin-right: 1vw
+      height: 1.7vw
+      vertical-align: middle
+
+    h3
+      font-size: 1.7vw
+
+    p
+      font-size: 1.7vw
+
+
 
 .c-city-cp-block1
   width: 100%
   display: block
   padding-top: 5vw
 
+@include breakpoint (tabletOnly)
+  .c-city-cp-block1
+    display: flex
+    padding: 5vw 10vw 3vw 10vw
+
 
 .c-city-cp-block2
   width: 100%
   display: block
+
+@include breakpoint (tabletOnly)
+  .c-city-cp-block2
+    display: flex
+    padding: 3vw 10vw
 
 
 .c-city-cp-ls
@@ -41,12 +69,25 @@
   width: 100%
   margin: 0 auto
   text-align: center
-  padding: 5vw 0 0vw 0
+  padding: 7vw 0vw 0vw 0vw
   h1
-    font-weight: 800
-    font-size: 4vw
+    font-weight: $bold
+    font-size: 5.2vw
     color: $codGray
   p
-    font-size: 3.5vw
+    font-size: 5.2vw
     color: $codGray
     line-height: 1.5
+
+@include breakpoint (tabletOnly)
+  .c-city-cp-ls
+    display: inline-block
+    width: 50%
+    padding: 0
+    text-align: left
+    margin-left: 3vw
+    h1
+      font-size: 2vw
+    p
+      font-size: 2vw
+      line-height: 1.3

@@ -4,11 +4,19 @@
   text-align: center
   padding: 31.25vw 9.375vw
   p
-    font-weight: 100
+    font-weight: $ultraLight
     color: $mineShaft
     line-height: 1.5
     font-size: 6.3vw
     letter-spacing: 0.1px
+
+@include breakpoint(tabletOnly)
+  .b-job-section
+    padding: 10vw 9.375vw
+    p
+      font-size: 2.4vw
+      margin: 0vw 6vw 20px 6vw
+      letter-spacing: 0px
 
 .b-job-position
   display: block

@@ -1,9 +1,16 @@
 .b-follow-us
   display: block
   width: 100%
-  padding: 12vw 5vw 20vw 5vw
+  padding: 22vw 5vw 21vw 5vw
   text-align: center
 
   &__icons
     display: block
     margin-top: 11vw
+
+@include breakpoint(tabletOnly)
+  .b-follow-us
+    padding: 10vw 5vw 8vw 5vw
+
+    &__icons
+      margin: 3vw
