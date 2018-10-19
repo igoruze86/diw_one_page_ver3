@@ -13,6 +13,7 @@ window.onscroll = function() {
       $('.c-nav-menu-mob').slideUp(220);
       iconClose.removeClass('c-icons-burger-close');
     }
+    // prevScroll = currScroll
 }
 
 // logo animation

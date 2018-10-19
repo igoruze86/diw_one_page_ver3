@@ -6,6 +6,10 @@ nav
   position: fixed
   z-index: 10
 
+@include breakpoint(phoneLandscape)
+  nav
+    height: 50px
+
 @include breakpoint(tabletOnly)
   nav
     background: $whiteRock2
@@ -21,7 +25,6 @@ nav
   left: 0
   right: 0
   background: $whiteRock
-  max-width: 1300px
   z-index: 20
   ul
     display: none
@@ -31,12 +34,17 @@ nav
       display: inline-block
       margin-left: 30px
 
+@include breakpoint(phoneLandscape)
+  .b-nav
+    height: 50px
+
 @include breakpoint (tabletOnly)
   .b-nav
-    padding: 10px 40px
     background: $whiteRock2
+
 
 @include breakpoint(desktopOnly)
   .b-nav
+    max-width: 1800px
     ul
       display: inline-block

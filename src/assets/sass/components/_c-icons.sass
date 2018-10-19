@@ -3,6 +3,11 @@
   float: right
   margin-left: 8vw
 
+@include breakpoint(phoneLandscape)
+  .c-icons-nav-fbico
+    width: 10px
+    margin-left: 4vw
+
 @include breakpoint(tabletOnly)
   .c-icons-nav-fbico
     width: 10px
@@ -11,6 +16,10 @@
 .c-icons-nav-twittico
   float: right
   width: 7.2vw
+
+@include breakpoint(phoneLandscape)
+  .c-icons-nav-twittico
+    width: 23px
 
 @include breakpoint(tabletOnly)
   .c-icons-nav-twittico
@@ -21,6 +30,10 @@
   width: 138px
   display: inline-block
   transition: all 0.3s ease-in-out
+
+@include breakpoint(phoneLandscape)
+  .c-icons-logo
+    width: 120px
 
 .hide
   opacity: 0
@@ -37,9 +50,18 @@
   opacity: 0
   transition: all 0.5s ease-in-out
 
+@include breakpoint(phoneLandscape)
+  .c-icons-logo-icon
+    left: 108px
+    width: 32px
+
 .show
   opacity: 1
   transform: translateX(-101px)
+
+@include breakpoint(phoneLandscape)
+  .show
+    transform: translateX(-81px)
 
 @include breakpoint(desktopOnly)
   .show
@@ -74,6 +96,12 @@
     background: lighten($mineShaft, 10%)
     top: 85%
     transition: all ease 0.2s
+
+@include breakpoint(phoneLandscape)
+  .c-icons-burger
+    width: 26px
+    height: 20px
+    margin-top: 6px
 
 @include breakpoint(desktopOnly)
   .c-icons-burger
