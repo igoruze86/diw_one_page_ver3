@@ -22,7 +22,6 @@
     border-radius: 2px
     padding: 1vw 2vw
 
-
   &--red
     li
       color: $crimson
@@ -38,3 +37,18 @@
 @include breakpoint(tabletOnly)
   .c-lang-ls-border
     display: inline-block
+
+@include breakpoint(desktopOnly)
+  .c-lang-ls-border
+    font-size: 10px
+
+    li
+      padding: 8px 15px
+
+    &--red
+      li
+        margin-right: 5px
+
+    &--white
+      li
+        margin-right: 5px

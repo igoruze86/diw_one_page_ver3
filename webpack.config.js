@@ -40,8 +40,22 @@ module.exports = {
       },
     }),
     new HtmlWebpackPlugin({
+      filename: 'job_page_fed.html',
+      template: './src/job_page_fed.html',
+      minify: {
+        collapseWhitespace: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
       filename: 'job_page_pm.html',
       template: './src/job_page_pm.html',
+      minify: {
+        collapseWhitespace: true,
+      },
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'job_page_design.html',
+      template: './src/job_page_design.html',
       minify: {
         collapseWhitespace: true,
       },

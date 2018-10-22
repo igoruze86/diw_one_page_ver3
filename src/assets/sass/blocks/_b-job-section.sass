@@ -18,8 +18,14 @@
       margin: 0vw 6vw 20px 6vw
       letter-spacing: 0px
 
+@include breakpoint(desktopOnly)
+  .b-job-section
+    max-width: 1025px
+    margin: 0 auto
+    padding: 100px 80px
+    p
+      font-size: 24px
+
 .b-job-position
   display: block
   width: 100%
-  max-width: 1300px
-  margin: 0 auto

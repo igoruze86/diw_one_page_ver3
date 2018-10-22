@@ -29,3 +29,20 @@
       line-height: 1.6
       padding: 0vw
       margin: 0 2vw
+
+@include breakpoint(desktopOnly)
+  .c-description
+    padding: 5px 60px 100px 60px
+    h2
+      font-size: 18px
+      letter-spacing: 2px
+    p
+      font-size: 14px
+
+@include breakpoint(desktopHD)
+  .c-description
+    padding: 2vw 5vw 4vw 5vw
+    h2
+      font-size: 22px
+    p
+      font-size: 18px

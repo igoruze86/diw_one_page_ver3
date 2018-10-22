@@ -1,0 +1,19 @@
+@include breakpoint(tabletOnly)
+  .w-hp-location-wrapper
+    display: flex
+    flex-direction: row
+    justify-content: center
+
+@include breakpoint(desktopOnly)
+  .w-hp-location-wrapper
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+      width: 100%
+      max-width: 1025px
+      margin: 0 auto
+      padding: 0px 20px
+
+@include breakpoint(desktopHD)
+  .w-hp-location-wrapper
+    max-width: 1560px

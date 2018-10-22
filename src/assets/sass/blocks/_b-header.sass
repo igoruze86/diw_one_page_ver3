@@ -2,19 +2,26 @@
   width: 100%
   position: relative
   z-index: 1
+
   &-banner
     display: block
     width: 100%
+
   &-banner-desk
     display: none
     width: 100%
 
 @include breakpoint(tabletOnly)
   .b-header
+    max-height: 695px
+    overflow: hidden
+
     &-banner
       display: none
+
     &-banner-desk
       display: block
+
 
 .b-header-title
   display: block
@@ -24,21 +31,25 @@
   top: 48.125VW
   z-index: 10
   padding: 20px 20px
+
   h1
     width: 100%
     font-size: 18.4vw
     font-weight: $bold
     line-height: 1
     letter-spacing: 0.1vw
+
   img
     display: none
     padding: 30px 0
+
   h2
     display: block
     font-size: 5.9vw
     margin-top: 15.6vw
     font-weight: $regular
     letter-spacing: 0.3vw
+
   p
     display: none
     font-size: 2.5vw
@@ -52,9 +63,29 @@
     left: 0
     right: 0
     padding: 20px 20px
+
     h1
       font-size: 5vw
+
     h2
       display: none
+
     p
       display: block
+
+@include breakpoint(desktopOnly)
+  .b-header-title
+    top: 50%
+    transform: translateY(-50%)
+
+    img
+      display: block
+      margin: 0 auto
+
+    h1
+      font-size: 70px
+      
+    p
+      font-size: 20px
+      font-weight: $bold
+      margin-top: 0

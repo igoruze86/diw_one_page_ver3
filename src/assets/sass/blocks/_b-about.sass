@@ -2,10 +2,8 @@
   display: block
   width: 100%
   text-align: center
-  padding: 5vw 2.5vw
+  padding: 5vw 0
   background: $alabaster
-  max-width: 1300px
-  margin: 0 auto
   p
     display: block
     text-align: left
@@ -21,3 +19,18 @@
       padding: 0vw 6vw 2vw 6vw
       font-size: 1.7vw
       letter-spacing: 0.1px
+
+@include breakpoint(desktopOnly)
+  .b-about
+    p
+      max-width: 1025px
+      font-size: 14px
+      margin: 0 auto
+      padding: 0 10vw
+      font-weight: $light
+      line-height: 1.7
+
+@include breakpoint(desktopHD)
+  .b-about
+    p
+      padding: 0 5vw     

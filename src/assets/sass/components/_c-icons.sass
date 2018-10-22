@@ -35,6 +35,14 @@
   .c-icons-logo
     width: 120px
 
+@include breakpoint(desktopOnly)
+  .c-icons-logo
+    position: absolute
+    width: 156px
+    top: 50%
+    left: 20px
+    transform: translateY(-50%)
+
 .hide
   opacity: 0
   transition: 0.3s
@@ -66,7 +74,6 @@
 @include breakpoint(desktopOnly)
   .show
     opacity: 0
-
 
 
 .c-icons-burger
@@ -134,6 +141,10 @@
     padding: 2.5vw 0vw
     width: 55px
 
+@include breakpoint(desktopOnly)
+  .c-icons-description
+    width: 86px
+    padding: 70px 0 40px 0
 
 .c-icons-gray-dash
   display: block
@@ -157,6 +168,12 @@
     &--center
       padding: 4vw 0vw
 
+@include breakpoint(desktopOnly)
+  .c-icons-red-dash
+    padding: 20px 0
+    &--center
+      padding: 30px 0
+
 
 .c-icons-cp-red-dash
   display: block
@@ -167,6 +184,10 @@
   .c-icons-cp-red-dash
     margin: 0 0
     padding: 2vw 0vw
+
+@include breakpoint(desktopOnly)
+  .c-icons-cp-red-dash
+    padding: 15px 0
 
 // -----------------------------------------------
 .c-icons-twitt-color
@@ -180,6 +201,10 @@
     width: 55px
     margin-right: 1vw
 
+@include breakpoint(desktopOnly)
+  .c-icons-twitt-color
+    width: 65px
+    margin-right: 5px
 
 .c-icons-fb-color
   margin-left: 2.5vw
@@ -191,6 +216,11 @@
   .c-icons-fb-color
     width: 55px
     margin-left: 1vw
+
+@include breakpoint(desktopOnly)
+  .c-icons-fb-color
+    width: 65px
+    margin-right: 5px
 // -----------------------------------------------
 
 
@@ -205,6 +235,10 @@
   .c-icons-cp-twitt-color
     margin-right: 0.5vw
 
+@include breakpoint(desktopOnly)
+  .c-icons-cp-twitt-color
+    width: 35px
+
 
 .c-icons-cp-fb-color
   margin-left: 1.5vw
@@ -216,6 +250,10 @@
 @include breakpoint(tabletOnly)
   .c-icons-cp-fb-color
     margin-left: 0.5vw
+
+@include breakpoint(desktopOnly)
+  .c-icons-cp-fb-color
+    width: 35px
 
 
 .c-icons-footer-in
@@ -232,6 +270,10 @@
     margin-right: 1vw
     vertical-align: middle
 
+@include breakpoint(desktopOnly)
+  .c-icons-footer-in
+    height: 18px
+
 
 .c-icons-footer-twitt
   display: inline-block
@@ -247,18 +289,6 @@
     margin-left: 1vw
     vertical-align: middle
 
-
-.c-icons-twitt-bw
-  width: 28px
-  margin: 0 1vw
-
-  &:hover
-    opacity: 0.7
-
-
-.c-icons-fb-bw
-  width: 28px
-  margin: 0 1vw
-
-  &:hover
-    opacity: 0.7
+@include breakpoint(desktopOnly)
+  .c-icons-footer-twitt
+    height: 18px

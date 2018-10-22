@@ -12,6 +12,8 @@
   .c-nav-menu-mob
     height: 100vh
     top: 50px
+    width: 33.33%
+    right: 0
 
 @include breakpoint(tabletOnly)
   .c-nav-menu-mob
@@ -82,19 +84,19 @@
 
 @include breakpoint(phoneLandscape)
   .nav-menu-mob__social
-    padding: 0 30vw
-    p
-      padding: 0vw 0vw
-      font-size: 1.5vw
-      letter-spacing: 0.4vw
-
-@include breakpoint(tabletOnly)
-  .nav-menu-mob__social
     padding: 0 3vw
     p
       padding: 0vw 0vw
       font-size: 1.5vw
       letter-spacing: 0.4vw
+
+// @include breakpoint(tabletOnly)
+//   .nav-menu-mob__social
+//     padding: 0 3vw
+//     p
+//       padding: 0vw 0vw
+//       font-size: 1.5vw
+//       letter-spacing: 0.4vw
 
 @include breakpoint(desktopOnly)
   .nav-menu-mob__social

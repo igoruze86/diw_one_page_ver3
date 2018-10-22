@@ -55,3 +55,31 @@
       display: inline-block
       padding: 3vw 0vw
       text-align: left
+
+@include breakpoint(desktopOnly)
+  .b-footer
+    padding: 0
+
+    &__social-container
+      margin-right: 20px
+      padding: 0
+      p
+        display: inline-block
+        font-size: 13px
+        margin-left: 2vw
+        padding: 0
+
+    &__copyright-container
+      display: inline-block
+      padding: 20px 0
+      text-align: left
+
+    &__copyrigtxt
+      font-size: 10px
+      letter-spacing: 0.4px
+
+@include breakpoint(desktopHD)
+  .b-footer
+    
+    &__copyright-container
+      padding: 30px 0

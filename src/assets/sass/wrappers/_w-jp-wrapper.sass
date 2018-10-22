@@ -6,4 +6,15 @@
 
 @include breakpoint (tabletOnly)
   .w-jp-wrapper
-    padding: 6vw 9vw 
+    padding: 6vw 9vw
+
+@include breakpoint(desktopOnly)
+  .w-jp-wrapper
+    padding: 6vw 20px
+    max-width: 1025px
+    margin: 0 auto
+
+@include breakpoint(desktopHD)
+  .w-jp-wrapper
+    max-width: 1560px
+    margin-left: 0 auto

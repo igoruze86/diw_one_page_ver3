@@ -14,6 +14,10 @@ nav
   nav
     background: $whiteRock2
 
+@include breakpoint(desktopOnly)
+  nav
+    height: 60px
+
 
 .b-nav
   display: block
@@ -24,7 +28,6 @@ nav
   position: fixed
   left: 0
   right: 0
-  background: $whiteRock
   z-index: 20
   ul
     display: none
@@ -32,19 +35,39 @@ nav
     padding: 10px 0
     li
       display: inline-block
-      margin-left: 30px
+      margin-left: 50px
 
 @include breakpoint(phoneLandscape)
   .b-nav
     height: 50px
 
-@include breakpoint (tabletOnly)
-  .b-nav
-    background: $whiteRock2
-
-
 @include breakpoint(desktopOnly)
   .b-nav
-    max-width: 1800px
+    max-width: 1025px
+    height: 60px
     ul
       display: inline-block
+      li
+        margin-top: 5px
+        font-size: 15px
+        font-weight: $bold
+        position: relative
+        &:before
+          content: ''
+          position: absolute
+          width: 0
+          height: 2px
+          bottom: -4px
+          left: 0
+          background: $crimson
+          transition: all 0.3s ease
+        &:hover:before
+          width: 100%
+
+@include breakpoint(desktopHD)
+  .b-nav
+    max-width: 1560px
+
+
+.active
+  font-weight: $ultraBold

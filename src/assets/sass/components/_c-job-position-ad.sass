@@ -34,3 +34,31 @@
       background: $mineShaft
       p
         color: $gallery
+
+@include breakpoint(desktopOnly)
+  .c-job-position-ad
+    p
+      font-size: 15px
+      max-width: 50%
+    h3
+      position: relative
+      &:before
+        content: ''
+        position: absolute
+        width: 0
+        height: 2px
+        bottom: -4px
+        left: 0
+        transition: all 0.3s ease
+      &:hover:before
+        width: 100%
+
+    &--bg1
+      h3
+        &:before
+          background: $mineShaft
+
+    &--bg2
+      h3
+        &:before
+          background: $gallery
