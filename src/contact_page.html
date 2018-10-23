@@ -11,6 +11,13 @@
 		<!-- End Google Tag Manager -->
 
 		<meta charset="utf-8">
+		<meta name="description" content="Diwanee je digitalna medijska kompanija, okrenuta velikoj ženskoj publici na Bliskom istoku. Naša kompanija stvara i distribuira originalan i pouzdan sadržaj">
+		<meta name="robots" content="index, follow">
+		<meta property="og:title" content="Diwanee Serbia - Kontaktirajte nas">
+		<meta property="og:url" content="https://igoruze86.github.io/diw_one_page_ver3/dist/contact_page.html">
+		<meta name="og:description" content="We are always looking for motivated, multi-talented, and organized people to join our diverse team.">
+		<meta property="og:image" content="https://igoruze86.github.io/diw_one_page_ver3/dist/assets/img/banner_desk.png">
+		<meta property="og:type" content="website">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
 		<title>Diwanee Serbia - Kontakt</title>
@@ -59,12 +66,12 @@
 
 			<!-- CONTACT FORM -->
 			<div class="c-form">
-				<form action="msg-sent.php" method="post">
+				<form action="contact-form.php" method="post">
 					<div class="c-form__block1">
 						<h1 class="c-heading-medium">Kontakt</h1>
 						<img src="assets/img/red_dash.png" class="c-icons-red-dash">
 							<label for="ime" class="c-form__input-label">Ime
-								<input type="text" class="c-form__input" required>
+								<input type="text" name="name" class="c-form__input" required>
 							</label>
 							<label for="email" class="c-form__input-label">Email
 								<input type="email" name="email" class="c-form__input" required>
@@ -79,7 +86,7 @@
 								<textarea rows="12" type="message" name="message" placeholder="Pisite poruku ovde..." class="c-form__input-msg" required></textarea>
 							</label>
 					</div>
-					<input type="submit" value="posaljite poruku" class="c-btn-submit">
+					<input type="submit" name="submit" value="posaljite poruku" class="c-btn-submit">
 				</form>
 			</div>
 

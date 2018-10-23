@@ -2,6 +2,8 @@
   width: 100%
   position: relative
   z-index: 1
+  max-height: 557px
+  overflow-y: hidden
 
   &-banner
     display: block
@@ -28,7 +30,8 @@
   text-align: center
   color: $mineShaft
   position: absolute
-  top: 48.125VW
+  top: 50%
+  transform: translateY(-50%)
   z-index: 10
   padding: 20px 20px
 
@@ -59,10 +62,10 @@
 
 @include breakpoint(tabletOnly)
   .b-header-title
-    top: 12VW
-    left: 0
-    right: 0
-    padding: 20px 20px
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 100%
 
     h1
       font-size: 5vw
@@ -76,7 +79,9 @@
 @include breakpoint(desktopOnly)
   .b-header-title
     top: 50%
-    transform: translateY(-50%)
+    left: 50%
+    transform: translate(-50%,-50%)
+    width: 100%
 
     img
       display: block
@@ -84,7 +89,7 @@
 
     h1
       font-size: 70px
-      
+
     p
       font-size: 20px
       font-weight: $bold
