@@ -73,6 +73,10 @@
     margin: 0 auto
     max-width: 1025px
 
+@include breakpoint(desktopHD)
+  .c-city-cp-block1
+    padding: 30px 0 50px 50px
+
 
 .c-city-cp-block2
   width: 100%
@@ -91,6 +95,10 @@
     margin: 0 auto
     max-width: 1025px
 
+@include breakpoint(desktopHD)
+  .c-city-cp-block2
+    padding: 50px 0 20px 50px
+
 
 .c-city-cp-ls
   display: block
@@ -99,7 +107,7 @@
   text-align: center
   padding: 7vw 0vw 0vw 0vw
   h1
-    font-weight: $bold
+    font-weight: $ultraBold
     font-size: 5.2vw
     color: $codGray
   p
@@ -127,3 +135,12 @@
       font-size: 20px
     p
       font-size: 20px
+
+@include breakpoint(desktopHD)
+  .c-city-cp-ls
+    width: 50%
+    margin: 0
+    h1
+      font-size: 18px
+    p
+      font-size: 18px

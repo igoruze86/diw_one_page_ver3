@@ -9,17 +9,20 @@
 @include breakpoint (desktopOnly)
   .w-cp-wrapper
     max-width: 1025px
-    padding: 0
-    margin: 110px auto 0 auto
+    padding: 0 20px
+    margin: 110px auto 50px auto
 
 @include breakpoint (desktopHD)
   .w-cp-wrapper
     display: flex
     flex-direction: row
     justify-content: center
-    max-width: 1560px
+    max-width: 1300px
     margin: 60px auto 0 auto
-    padding: 8vw 0 15vw 0
+    padding: 8vw 20px 15vw 20px
+
+@include breakpoint(desktopOnly)
+  .w-cp-city-ls-wrapper
 
 
 @include breakpoint(desktopHD)
