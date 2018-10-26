@@ -7,30 +7,20 @@
   border-bottom: 0.1px solid $whiteRock
   top: 60px
   z-index: 20
-
-@include breakpoint(phoneLandscape)
-  .c-nav-menu-mob
+  @include breakpoint(phoneLandscape)
     top: 50px
     width: 50%
     right: 0
     height: 507px
-
-@include breakpoint(tabletOnly)
-  .c-nav-menu-mob
+  @include breakpoint(tabletOnly)
     width: 33.33%
     right: 0
     height: 50vw
-
-@include breakpoint(tabletPortrait)
-  .c-nav-menu-mob
+  @include breakpoint(tabletPortrait)
     height: 321px
-
-@include breakpoint(tabletLandscape)
-  .c-nav-menu-mob
+  @include breakpoint(tabletLandscape)
     height: 444px
-
-@include breakpoint(desktopOnly)
-  .c-nav-menu-mob
+  @include breakpoint(desktopOnly)
     display: none
     width: 0
     height: 0
@@ -40,43 +30,31 @@
 
 
 .c-nav-menu-container
+  @include absolute(center-vertical)
   color: $silver
   font-weight: $light
   position: absolute
   width: 100%
-  top: 50%
-  transform: translateY(-50%)
+  @include breakpoint(desktoOnly)
+    display: none
   ul
+    @include breakpoint(desktoOnly)
+      display: none
     li
       line-height: 3
       text-align: center
       font-weight: $ultraLight
       font-size: 7.6vw
-      a
-        display: block
-
-@include breakpoint(phoneLandscape)
-  .c-nav-menu-container
-    ul
-      li
+      @include breakpoint(phoneLandscape)
         font-size: 2.5vw
         line-height: 3
         letter-spacing: 2px
-
-
-@include breakpoint(tabletOnly)
-  .c-nav-menu-container
-    ul
-      li
+      @include breakpoint(tabletOnly)
         font-size: 2vw
-
-@include breakpoint(desktoOnly)
-  .c-nav-menu-container
-    display: none
-    ul
-      display: none
-      li
-        display: none
+        @include breakpoint(desktoOnly)
+          display: none
+      a
+        display: block
 
 
 .nav-menu-mob__social
@@ -84,22 +62,19 @@
   max-width: 768px
   margin: 50px auto 0 auto
   padding: 0 10vw
+  @include breakpoint(phoneLandscape)
+    padding: 0 3vw
+  @include breakpoint(desktopOnly)
+    display: none
+
   p
     display: inline-block
     padding: 0.9vw 0
     font-size: 4.6vw
     letter-spacing: 1.4vw
-
-@include breakpoint(phoneLandscape)
-  .nav-menu-mob__social
-    padding: 0 3vw
-    p
+    @include breakpoint(phoneLandscape)
       padding: 0vw 0vw
       font-size: 1.5vw
       letter-spacing: 0.4vw
-
-@include breakpoint(desktopOnly)
-  .nav-menu-mob__social
-    display: none
-    p
+    @include breakpoint(desktopOnly)
       display: none

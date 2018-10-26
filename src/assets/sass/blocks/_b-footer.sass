@@ -4,11 +4,30 @@
   width: 100%
   position: relative
   background-color: $mineShaft
+  @include breakpoint(tabletOnly)
+    display: block
+    width: 100%
+    background-color: $codGray
+    padding: 0 7vw
+  @include breakpoint(desktopOnly)
+    padding: 0
 
   &__social-container
     text-align: center
     display: block
     padding: 5vw 5vw
+    @include breakpoint(tabletOnly)
+      position: absolute
+      display: inline-block
+      top: 50%
+      right: 0
+      margin-right: 7vw
+      transform: translate(0,-50%)
+      padding: 0
+    @include breakpoint(desktopOnly)
+      margin-right: 20px
+      padding: 0
+
     p
       padding-top: 5vw
       color: $scorpion
@@ -16,6 +35,16 @@
       letter-spacing: 0.6px
       &:hover
         opacity: 0.7
+      @include breakpoint(tabletOnly)
+        display: inline-block
+        font-size: 1.3vw
+        margin-left: 2vw
+        padding: 0
+      @include breakpoint(desktopOnly)
+        display: inline-block
+        font-size: 13px
+        margin-left: 2vw
+        padding: 0
 
   &__copyright-container
     display: block
@@ -24,62 +53,21 @@
     padding-top: 4.6vw
     padding-bottom: 4.6vw
     text-align: center
+    @include breakpoint(tabletOnly)
+      display: inline-block
+      padding: 3vw 0vw
+      text-align: left
+    @include breakpoint(desktopOnly)
+      display: inline-block
+      padding: 20px 0
+      text-align: left
+    @include breakpoint(desktopHD)
+      padding: 30px 0
 
   &__copyrigtxt
     margin: 0 auto
     font-size: 8px
     letter-spacing: 0.4px
-
-@include breakpoint(tabletOnly)
-  .b-footer
-    display: block
-    width: 100%
-    background-color: $codGray
-    padding: 0 7vw
-
-    &__social-container
-      position: absolute
-      display: inline-block
-      top: 50%
-      right: 0
-      margin-right: 7vw
-      transform: translate(0,-50%)
-      padding: 0
-      p
-        display: inline-block
-        font-size: 1.3vw
-        margin-left: 2vw
-        padding: 0
-
-    &__copyright-container
-      display: inline-block
-      padding: 3vw 0vw
-      text-align: left
-
-@include breakpoint(desktopOnly)
-  .b-footer
-    padding: 0
-
-    &__social-container
-      margin-right: 20px
-      padding: 0
-      p
-        display: inline-block
-        font-size: 13px
-        margin-left: 2vw
-        padding: 0
-
-    &__copyright-container
-      display: inline-block
-      padding: 20px 0
-      text-align: left
-
-    &__copyrigtxt
+    @include breakpoint(desktopOnly)
       font-size: 10px
       letter-spacing: 0.4px
-
-@include breakpoint(desktopHD)
-  .b-footer
-    
-    &__copyright-container
-      padding: 30px 0

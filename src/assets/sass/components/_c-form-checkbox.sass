@@ -9,14 +9,10 @@
   -ms-user-select: none
   user-select: none
   cursor: pointer
-
-@include breakpoint (tabletOnly)
-  .c-form__input-label-checkbox
+  @include breakpoint (tabletOnly)
     margin-left: 3.5vw
     font-size: 1.8vw
-
-@include breakpoint (desktopOnly)
-  .c-form__input-label-checkbox
+  @include breakpoint (desktopOnly)
     margin-left: 40px
     font-size: 20px
     font-weight: $bold
@@ -34,13 +30,11 @@
   &:checked ~ .c-form__checkmark::after
     display: block
 
-@include breakpoint (tabletOnly)
-  .c-form__input-checkbox
+  @include breakpoint (tabletOnly)
     top: -0.3vw
     left: -4vw
 
-@include breakpoint (desktopOnly)
-  .c-form__input-checkbox
+  @include breakpoint (desktopOnly)
     top: -10px
     left: -60px
     margin: 10px
@@ -56,6 +50,20 @@
   border: 1.5px solid $crimson
   border-radius: 2px
   cursor: pointer
+  @include breakpoint (tabletOnly)
+    top: -0.3vw
+    left: -4vw
+    margin: 0.5vw 0.5vw
+    height: 2vw
+    width: 2vw
+    border: 1px solid $crimson
+  @include breakpoint(desktopOnly)
+    top: -10px
+    left: -50px
+    margin: 10px
+    height: 25px
+    width: 25px
+    border: 1px solid $crimson
 
   &::after
     content: ""
@@ -70,32 +78,12 @@
     -webkit-transform: rotate(45deg)
     -ms-transform: rotate(45deg)
     transform: rotate(45deg)
-
-@include breakpoint (tabletOnly)
-  .c-form__checkmark
-    top: -0.3vw
-    left: -4vw
-    margin: 0.5vw 0.5vw
-    height: 2vw
-    width: 2vw
-    border: 1px solid $crimson
-
-    &::after
+    @include breakpoint (tabletOnly)
       left: 0.53vw
       top: -0.08vw
       width: 0.5vw
       height: 1.2vw
-
-@include breakpoint (desktopOnly)
-  .c-form__checkmark
-    top: -10px
-    left: -50px
-    margin: 10px
-    height: 25px
-    width: 25px
-    border: 1px solid $crimson
-
-    &::after
+    @include breakpoint (desktopOnly)
       left: 8px
       top: 2px
       width: 7px

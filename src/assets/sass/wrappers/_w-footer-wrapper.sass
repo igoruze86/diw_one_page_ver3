@@ -1,12 +1,10 @@
-@include breakpoint(desktopOnly)
-  .w-footer-wrapper
+.w-footer-wrapper
+  @include breakpoint(desktopOnly)
     position: relative
     width: 100%
     max-width: 1025px
     margin: 0 auto
     padding: 0 20px
-
-@include breakpoint(desktopHD)
-  .w-footer-wrapper
+  @include breakpoint(desktopHD)
     max-width: 1300px
     margin: 0 auto

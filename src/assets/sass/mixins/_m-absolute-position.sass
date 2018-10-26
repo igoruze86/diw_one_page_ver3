@@ -1,0 +1,20 @@
+//----- Mixin / Absolute position
+
+@mixin absolute($position)
+  $per: 50%
+  position: absolute
+
+  @if $position == 'center'
+    top: #{$per}
+    left: #{$per}
+    transform: translate(-#{$per}, -#{$per})
+
+  @else if $position == 'center-vertical'
+    top: #{$per}
+    transform: translateY(-#{$per})
+
+  @else if $position == 'center-horizontal'
+    left: #{$per}
+    transform: translateX(-#{$per})
+
+//----- Example @include absolute(center);

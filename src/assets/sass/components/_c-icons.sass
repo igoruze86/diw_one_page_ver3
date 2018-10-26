@@ -2,27 +2,20 @@
   width: 3.2vw
   float: right
   margin-left: 8vw
-
-@include breakpoint(phoneLandscape)
-  .c-icons-nav-fbico
+  @include breakpoint(phoneLandscape)
     width: 10px
     margin-left: 4vw
-
-@include breakpoint(tabletOnly)
-  .c-icons-nav-fbico
+  @include breakpoint(tabletOnly)
     width: 10px
     margin-left: 2vw
+
 
 .c-icons-nav-twittico
   float: right
   width: 7.2vw
-
-@include breakpoint(phoneLandscape)
-  .c-icons-nav-twittico
+  @include breakpoint(phoneLandscape)
     width: 23px
-
-@include breakpoint(tabletOnly)
-  .c-icons-nav-twittico
+  @include breakpoint(tabletOnly)
     width: 23px
 
 
@@ -30,13 +23,9 @@
   width: 138px
   display: inline-block
   transition: all 0.3s ease-in-out
-
-@include breakpoint(phoneLandscape)
-  .c-icons-logo
+  @include breakpoint(phoneLandscape)
     width: 120px
-
-@include breakpoint(desktopOnly)
-  .c-icons-logo
+  @include breakpoint(desktopOnly)
     position: absolute
     width: 156px
     top: 50%
@@ -47,10 +36,9 @@
 .hide
   opacity: 0
   transition: 0.3s
-
-@include breakpoint(desktopOnly)
-  .hide
+  @include breakpoint(desktopOnly)
     opacity: 1
+
 
 .c-icons-logo-icon
   position: absolute
@@ -58,9 +46,7 @@
   width: 37px
   opacity: 0
   transition: all 0.5s ease-in-out
-
-@include breakpoint(phoneLandscape)
-  .c-icons-logo-icon
+  @include breakpoint(phoneLandscape)
     left: 108px
     width: 32px
 
@@ -68,13 +54,9 @@
 .show
   opacity: 1
   transform: translateX(-101px)
-
-@include breakpoint(phoneLandscape)
-  .show
+  @include breakpoint(phoneLandscape)
     transform: translateX(-81px)
-
-@include breakpoint(desktopOnly)
-  .show
+  @include breakpoint(desktopOnly)
     opacity: 0
 
 
@@ -84,6 +66,13 @@
   height: 24px
   float: right
   margin-top: 8px
+  @include breakpoint(phoneLandscape)
+    width: 26px
+    height: 20px
+    margin-top: 6px
+  @include breakpoint(desktopOnly)
+    display: none
+
   &-line1
     position: absolute
     height: 3px
@@ -91,6 +80,7 @@
     background: lighten($mineShaft, 10%)
     top: 0%
     transition: all ease 0.2s
+
   &-line2
     position: absolute
     height: 3px
@@ -98,6 +88,7 @@
     background: lighten($mineShaft, 10%)
     top: 42%
     transition: all ease 0.2s
+
   &-line3
     position: absolute
     height: 3px
@@ -105,16 +96,6 @@
     background: lighten($mineShaft, 10%)
     top: 85%
     transition: all ease 0.2s
-
-@include breakpoint(phoneLandscape)
-  .c-icons-burger
-    width: 26px
-    height: 20px
-    margin-top: 6px
-
-@include breakpoint(desktopOnly)
-  .c-icons-burger
-    display: none
 
 
 .c-icons-burger-close .c-icons-burger-line1
@@ -137,160 +118,127 @@
   display: block
   padding: 11.4vw 0vw
   margin: 0 auto
-
-@include breakpoint (tabletOnly)
-  .c-icons-description
+  @include breakpoint (tabletOnly)
     padding: 2.5vw 0vw
     width: 55px
-
-@include breakpoint(desktopOnly)
-  .c-icons-description
+  @include breakpoint(desktopOnly)
     width: 86px
     padding: 70px 0 40px 0
+
 
 .c-icons-gray-dash
   display: block
   padding: 9.1vw 0vw
   margin: 0 auto
-
-@include breakpoint (tabletOnly)
-  .c-icons-gray-dash
+  @include breakpoint (tabletOnly)
     padding: 2.5vw 0vw
 
 .c-icons-red-dash
     display: block
     padding: 10vw 0
+    @include breakpoint(tabletOnly)
+      padding: 3vw 0vw
+    @include breakpoint(desktopOnly)
+      padding: 20px 0
 
     &--center
       margin: 0 auto
-
-@include breakpoint(tabletOnly)
-  .c-icons-red-dash
-    padding: 3vw 0vw
-    &--center
-      padding: 4vw 0vw
-
-@include breakpoint(desktopOnly)
-  .c-icons-red-dash
-    padding: 20px 0
-    &--center
-      padding: 30px 0
+      @include breakpoint(tabletOnly)
+        padding: 4vw 0vw
+      @include breakpoint(desktopOnly)
+        padding: 30px 0
 
 
 .c-icons-cp-red-dash
   display: block
   padding: 3vw 0
   margin: 0 auto
-
-@include breakpoint (tabletOnly)
-  .c-icons-cp-red-dash
+  @include breakpoint (tabletOnly)
     margin: 0 0
     padding: 2vw 0vw
-
-@include breakpoint(desktopOnly)
-  .c-icons-cp-red-dash
+  @include breakpoint(desktopOnly)
     padding: 15px 0
 
 // -----------------------------------------------
+
 .c-icons-twitt-color
   margin-right: 2.5vw
+  @include breakpoint(tabletOnly)
+    width: 55px
+    margin-right: 1vw
+  @include breakpoint(desktopOnly)
+    width: 65px
+    margin-right: 5px
 
   &:hover
     opacity: 0.7
 
-@include breakpoint(tabletOnly)
-  .c-icons-twitt-color
-    width: 55px
-    margin-right: 1vw
-
-@include breakpoint(desktopOnly)
-  .c-icons-twitt-color
-    width: 65px
-    margin-right: 5px
 
 .c-icons-fb-color
   margin-left: 2.5vw
+  @include breakpoint(tabletOnly)
+    width: 55px
+    margin-left: 1vw
+  @include breakpoint(desktopOnly)
+    width: 65px
+    margin-right: 5px
 
   &:hover
     opacity: 0.7
 
-@include breakpoint(tabletOnly)
-  .c-icons-fb-color
-    width: 55px
-    margin-left: 1vw
-
-@include breakpoint(desktopOnly)
-  .c-icons-fb-color
-    width: 65px
-    margin-right: 5px
 // -----------------------------------------------
-
 
 .c-icons-cp-twitt-color
   margin-right: 1.5vw
-  width: 25px
+  margin-top: 5px
+  width: 35px
+  @include breakpoint(tabletOnly)
+    margin-right: 0.5vw
+  @include breakpoint(desktopOnly)
+    width: 35px
 
   &:hover
     opacity: 0.7
-
-@include breakpoint(tabletOnly)
-  .c-icons-cp-twitt-color
-    margin-right: 0.5vw
-
-@include breakpoint(desktopOnly)
-  .c-icons-cp-twitt-color
-    width: 35px
 
 
 .c-icons-cp-fb-color
   margin-left: 1.5vw
-  width: 25px
+  margin-top: 5px
+  width: 35px
+  @include breakpoint(tabletOnly)
+    margin-left: 0.5vw
+  @include breakpoint(desktopOnly)
+    width: 35px
 
   &:hover
     opacity: 0.7
-
-@include breakpoint(tabletOnly)
-  .c-icons-cp-fb-color
-    margin-left: 0.5vw
-
-@include breakpoint(desktopOnly)
-  .c-icons-cp-fb-color
-    width: 35px
 
 
 .c-icons-footer-in
   display: inline-block
   height: 20px
   margin-right: 3vw
-
-  &:hover
-    opacity: 0.7
-
-@include breakpoint(tabletOnly)
-  .c-icons-footer-in
+  @include breakpoint(tabletOnly)
     height: 15px
     margin-right: 1vw
     vertical-align: middle
-
-@include breakpoint(desktopOnly)
-  .c-icons-footer-in
+  @include breakpoint(desktopOnly)
     height: 18px
+
+  &:hover
+    opacity: 0.7
 
 
 .c-icons-footer-twitt
   display: inline-block
   height: 20px
   margin-left: 3vw
-
-  &:hover
-    opacity: 0.7
-
-@include breakpoint(tabletOnly)
-  .c-icons-footer-twitt
+  @include breakpoint(tabletOnly)
     height: 15px
     margin-left: 1vw
     vertical-align: middle
-
-@include breakpoint(desktopOnly)
-  .c-icons-footer-twitt
+  @include breakpoint(desktopOnly)
     height: 18px
+
+  &:hover
+    opacity: 0.7

@@ -4,51 +4,42 @@
     font-size: 4.4vw
     margin: 3vw 0
     color: $crimson
+    @include breakpoint(tabletOnly)
+      display: none
     li
       display: inline-block
       margin-right: 2.5vw
 
-@include breakpoint(tabletOnly)
-  .c-lang-ls-noborder
-    display: none
 
 .c-lang-ls-border
   display: none
   font-weight: $light
   font-size: 1.3vw
   margin-top: 2vw
+  @include breakpoint(tabletOnly)
+    display: inline-block
+  @include breakpoint(desktopOnly)
+    font-size: 10px
+
   li
     display: inline-block
     border-radius: 2px
     padding: 1vw 2vw
+    @include breakpoint(desktopOnly)
+      padding: 8px 15px
 
   &--red
     li
       color: $crimson
       border: solid 1px $silver
       margin-right: 1vw
+      @include breakpoint(desktopOnly)
+        margin-right: 5px
 
   &--white
     li
       color: $gallery
       border: solid 1px $gallery
       margin-right: 1vw
-
-@include breakpoint(tabletOnly)
-  .c-lang-ls-border
-    display: inline-block
-
-@include breakpoint(desktopOnly)
-  .c-lang-ls-border
-    font-size: 10px
-
-    li
-      padding: 8px 15px
-
-    &--red
-      li
-        margin-right: 5px
-
-    &--white
-      li
+      @include breakpoint(desktopOnly)
         margin-right: 5px

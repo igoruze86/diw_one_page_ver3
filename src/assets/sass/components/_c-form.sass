@@ -1,7 +1,22 @@
+form
+  @include breakpoint (tabletOnly)
+  position: relative
+  width: 100%
+
+
 .c-form
   width: 100%
   display: block
   background-color: $concrete
+  @include breakpoint (tabletOnly)
+    display: flex
+    flex-direction: row
+    justify-content: center
+  @include breakpoint(desktopOnly)
+    padding: 0
+    margin: 0
+  @include breakpoint(desktopHD)
+    width: 50%
 
   &__block1
     display: block
@@ -9,23 +24,7 @@
     padding: 5vw 10vw 10vw 10vw
     margin-top: 0vw
     border-bottom: solid 2px $dustyGray
-
-  &__block2
-    display: block
-    padding: 5vw 10vw 10vw 10vw
-    margin-top: 0vw
-
-@include breakpoint (tabletOnly)
-  .c-form
-    display: flex
-    flex-direction: row
-    justify-content: center
-
-    form
-      position: relative
-      width: 100%
-
-    &__block1
+    @include breakpoint (tabletOnly)
       display: inline-block
       width: 50%
       padding: 0vw 5vw 7vw 5vw
@@ -33,42 +32,31 @@
       border-bottom: none
       border-right: solid 2px $dustyGray
       vertical-align: top
+    @include breakpoint(desktopOnly)
+      display: inline-block
+      width: 50%
+      padding: 0 50px 80px 50px
+      margin-top: 30px
+    @include breakpoint(desktopHD)
+      padding: 0px 50px 70px 50px
 
-    &__block2
+  &__block2
+    display: block
+    padding: 5vw 10vw 10vw 10vw
+    margin-top: 0vw
+    @include breakpoint (tabletOnly)
       display: inline-block
       width: 50%
       padding: 0vw 5vw 7vw 5vw
       margin-top: 2.5vw
-
-@include breakpoint(desktopOnly)
-  .c-form
-    display: flex
-    flex-direction: row
-    justify-content: center
-    padding: 0
-    margin: 0
-
-    &__block1
+    @include breakpoint(desktopOnly)
       display: inline-block
       width: 50%
       padding: 0 50px 80px 50px
       margin-top: 30px
-
-    &__block2
-      display: inline-block
-      width: 50%
-      padding: 0 50px 80px 50px
-      margin-top: 30px
-
-@include breakpoint(desktopHD)
-  .c-form
-    width: 50%
-
-    &__block1
-      padding: 0px 50px 70px 50px
-
-    &__block2
+    @include breakpoint(desktopHD)
       padding: 0px 50px 95px 50px
+
 // -----------------------------------------------
 
 .c-form__input
@@ -80,41 +68,34 @@
   margin-bottom: 10vw
   margin-top: 2vw
   font-size: 4.7vw
+  @include breakpoint (tabletOnly)
+    border-bottom: 1px solid $dustyGray
+    margin-bottom: 5vw
+    margin-top: 1vw
+    font-size: 1.6vw
+  @include breakpoint(desktopOnly)
+    border-bottom: 2px solid $dustyGray
+    margin-bottom: 40px
+    margin-top: 20px
+    font-size: 18px
 
   &::placeholder
     color: black
+    @include breakpoint (tabletOnly)
+      font-size: 1.6vw
+    @include breakpoint(desktopOnly)
+      font-size: 18px
 
   &-label
     font-weight: $light
     font-style: italic
     font-size: 4.7vw
     color: $dustyGray
-
-@include breakpoint (tabletOnly)
-  .c-form__input
-    border-bottom: 1px solid $dustyGray
-    margin-bottom: 5vw
-    margin-top: 1vw
-    font-size: 1.6vw
-
-    &::placeholder
+    @include breakpoint (tabletOnly)
       font-size: 1.6vw
-
-    &-label
-      font-size: 1.6vw
-
-@include breakpoint(desktopOnly)
-  .c-form__input
-    border-bottom: 2px solid $dustyGray
-    margin-bottom: 40px
-    margin-top: 20px
-    font-size: 18px
-
-    &::placeholder
+    @include breakpoint(desktopOnly)
       font-size: 18px
 
-    &-label
-      font-size: 18px
 // -----------------------------------------------
 
 .c-form__input-msg
@@ -125,16 +106,12 @@
   margin-top: 5vw
   font-size: 4.7vw
   outline-style: none
+  @include breakpoint (tabletOnly)
+    margin-top: 2vw
+    font-size: 1.6vw
+  @include breakpoint(desktopOnly)
+    margin-top: 15px
+    font-size: 18px
 
   &::placeholder
     color: black
-
-@include breakpoint (tabletOnly)
-  .c-form__input-msg
-    margin-top: 2vw
-    font-size: 1.6vw
-
-@include breakpoint(desktopOnly)
-  .c-form__input-msg
-    margin-top: 15px
-    font-size: 18px

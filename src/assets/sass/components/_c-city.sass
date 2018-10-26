@@ -1,102 +1,80 @@
 .c-city-ls
   display: block
-  width: 100%
+  width: auto
   padding: 10vw 0vw 6vw 0vw
+  @include breakpoint(tabletOnly)
+    display: inline-block
+    vertical-align: top
+    padding: 0
+  @include breakpoint(desktopOnly)
+    padding: 20px 0
 
   &-pin
     display: inline-block
     margin-right: 3vw
     vertical-align: top
     height: 5.2vw
+    @include breakpoint(tabletOnly)
+      margin-right: 1vw
+      height: 1.7vw
+      vertical-align: middle
+    @include breakpoint(desktopOnly)
+      height: 15px
 
   h3
     display: inline-block
     color: $concrete
     font-weight: $light
     font-size: 5.2vw
+    @include breakpoint(tabletOnly)
+      font-size: 1.5vw
+    @include breakpoint(desktopOnly)
+      font-size: 15px
 
   p
     color: $doveGray
     line-height: 1.5
     font-size: 5.2vw
-    margin-top: 4vw
+    margin-top: 2vw
     line-height: 1.5
-
-@include breakpoint(tabletOnly)
-  .c-city-ls
-    display: inline-block
-    width: auto
-    vertical-align: top
-    padding: 0
-
-    &-pin
-      margin-right: 1vw
-      height: 1.7vw
-      vertical-align: middle
-
-    h3
-      font-size: 1.7vw
-
-    p
-      font-size: 1.7vw
-
-@include breakpoint(desktopOnly)
-  .c-city-ls
-    padding: 20px 0
-    &-pin
-      height: 15px
-
-    h3
-      font-size: 15px
-
-    p
+    @include breakpoint(tabletOnly)
+      font-size: 1.5vw
+    @include breakpoint(desktopOnly)
       font-size: 15px
       margin-top: 20px
-// -----------------------------------------------
 
+// -----------------------------------------------
 
 .c-city-cp-block1
   width: 100%
   display: block
   padding-top: 5vw
-
-@include breakpoint (tabletOnly)
-  .c-city-cp-block1
+  @include breakpoint (tabletOnly)
     display: flex
     flex-direction: row
     justify-content: center
     padding: 5vw 10vw 3vw 10vw
-
-@include breakpoint(desktopOnly)
-  .c-city-cp-block1
+  @include breakpoint(desktopOnly)
     padding: 50px 0 30px 0
     margin: 0 auto
     max-width: 1025px
-
-@include breakpoint(desktopHD)
-  .c-city-cp-block1
+  @include breakpoint(desktopHD)
     padding: 30px 0 50px 50px
 
 
 .c-city-cp-block2
   width: 100%
   display: block
-
-@include breakpoint (tabletOnly)
-  .c-city-cp-block2
+  @include breakpoint (tabletOnly)
     display: flex
     flex-direction: row
     justify-content: center
     padding: 3vw 10vw
-
-@include breakpoint(desktopOnly)
-  .c-city-cp-block2
+  @include breakpoint(desktopOnly)
     padding: 20px 0 30px 0
     margin: 0 auto
     max-width: 1025px
-
-@include breakpoint(desktopHD)
-  .c-city-cp-block2
+  @include breakpoint(desktopHD)
     padding: 50px 0 20px 50px
 
 
@@ -106,41 +84,37 @@
   margin: 0 auto
   text-align: center
   padding: 7vw 0vw 0vw 0vw
-  h1
-    font-weight: $ultraBold
-    font-size: 5.2vw
-    color: $codGray
-  p
-    font-size: 5.2vw
-    color: $codGray
-    line-height: 1.5
-
-@include breakpoint (tabletOnly)
-  .c-city-cp-ls
+  @include breakpoint (tabletOnly)
     display: inline-block
     width: 50%
     padding: 0
     text-align: left
     margin-left: 3vw
-    h1
-      font-size: 2vw
-    p
-      font-size: 2vw
-      line-height: 1.3
-
-@include breakpoint(desktopOnly)
-  .c-city-cp-ls
+  @include breakpoint(desktopOnly)
     margin-left: 5vw
-    h1
-      font-size: 20px
-    p
-      font-size: 20px
-
-@include breakpoint(desktopHD)
-  .c-city-cp-ls
+  @include breakpoint(desktopHD)
     width: 50%
     margin: 0
-    h1
+
+  h1
+    font-weight: $ultraBold
+    font-size: 5.2vw
+    color: $codGray
+    @include breakpoint (tabletOnly)
+      font-size: 2vw
+    @include breakpoint(desktopOnly)
+      font-size: 20px
+    @include breakpoint(desktopHD)
       font-size: 18px
-    p
+
+  p
+    font-size: 5.2vw
+    color: $codGray
+    line-height: 1.5
+    @include breakpoint (tabletOnly)
+      font-size: 2vw
+      line-height: 1.3
+    @include breakpoint(desktopOnly)
+      font-size: 20px
+    @include breakpoint(desktopHD)
       font-size: 18px

@@ -4,24 +4,20 @@
   z-index: 1
   max-height: 557px
   overflow-y: hidden
+  @include breakpoint(tabletOnly)
+    max-height: 695px
+    overflow: hidden
 
   &-banner
     display: block
     width: 100%
+    @include breakpoint(tabletOnly)
+      display: none
 
   &-banner-desk
     display: none
     width: 100%
-
-@include breakpoint(tabletOnly)
-  .b-header
-    max-height: 695px
-    overflow: hidden
-
-    &-banner
-      display: none
-
-    &-banner-desk
+    @include breakpoint(tabletOnly)
       display: block
 
 
@@ -30,10 +26,12 @@
   text-align: center
   color: $mineShaft
   position: absolute
-  top: 50%
-  transform: translateY(-50%)
+  @include absolute(center-vertical)
   z-index: 10
   padding: 20px 20px
+  @include breakpoint(tabletOnly)
+    width: 100%
+    @include absolute(center)
 
   h1
     width: 100%
@@ -41,10 +39,17 @@
     font-weight: $bold
     line-height: 1
     letter-spacing: 0.1vw
+    @include breakpoint(tabletOnly)
+      font-size: 5vw
+    @include breakpoint(desktopOnly)
+      font-size: 70px
 
   img
     display: none
     padding: 30px 0
+    @include breakpoint(desktopOnly)
+      display: block
+      margin: 0 auto
 
   h2
     display: block
@@ -52,6 +57,8 @@
     margin-top: 15.6vw
     font-weight: $regular
     letter-spacing: 0.3vw
+    @include breakpoint(tabletOnly)
+      display: none
 
   p
     display: none
@@ -59,38 +66,9 @@
     margin-top: 5.4vw
     font-weight: $light
     letter-spacing: -0.3px
-
-@include breakpoint(tabletOnly)
-  .b-header-title
-    top: 50%
-    left: 50%
-    transform: translate(-50%,-50%)
-    width: 100%
-
-    h1
-      font-size: 5vw
-
-    h2
-      display: none
-
-    p
+    @include breakpoint(tabletOnly)
       display: block
-
-@include breakpoint(desktopOnly)
-  .b-header-title
-    top: 50%
-    left: 50%
-    transform: translate(-50%,-50%)
-    width: 100%
-
-    img
-      display: block
-      margin: 0 auto
-
-    h1
-      font-size: 70px
-
-    p
+    @include breakpoint(desktopOnly)
       font-size: 20px
       font-weight: $bold
       margin-top: 0

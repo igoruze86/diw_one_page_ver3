@@ -9,23 +9,16 @@
   font-weight: $light
   font-size: 1.5vw
   color: $mineShaft
-
-@include breakpoint(tabletOnly)
-  .c-btn-apply
+  @include breakpoint(tabletOnly)
     display: inline-block
-
     &:active
       background: $alto
-
     &--contrast
       border-color: $gallery
       color: $gallery
-
       &:hover
         color: $gallery
-
-@include breakpoint(desktopOnly)
-  .c-btn-apply
+  @include breakpoint(desktopOnly)
     right: 20px
     top: 3vw
     font-size: 12px
@@ -46,14 +39,11 @@
       transition: all 0.3s ease
     &:hover:before
       width: 100%
-
     &--contrast
       border: solid 2px $gallery
       &:before
         background: transparentize($gallery, 0.8)
-
-@include breakpoint(desktopHD)
-  .c-btn-apply
+  @include breakpoint(desktopHD)
     top: 2.5vw
 
 
@@ -71,27 +61,20 @@
   transition: 0.4s
   top: 0px
   cursor: pointer
-
   &:active
     background: darken($mineShaft, 10%)
-
-@include breakpoint(tabletOnly)
-  .c-btn-load
+  @include breakpoint(tabletOnly)
     font-size: 1.4vw
     padding: 2vw 1.7vw
-
-@include breakpoint(desktopOnly)
-  .c-btn-load
+  @include breakpoint(desktopOnly)
     padding: 15px 15px
     font-size: 12px
-
     &:hover
       background: $mineShaft
       color: $alto
       box-shadow: 0px 3px 10px lighten($mineShaft, 40%)
       transition: 0.4s
       top: -3px
-
     &:active
       top: 0px
       box-shadow: 0px 0px 0px lighten($mineShaft, 40%)
@@ -110,21 +93,15 @@
   text-align: center
   cursor: pointer
   outline-style: none
-
   &:active
     background: darken($crimson, 10%)
-
-
-@include breakpoint (tabletOnly)
-  .c-btn-submit
+  @include breakpoint (tabletOnly)
     position: absolute
     bottom: 0
     right: 0
     font-size: 2vw
     padding: 1.8vw
     width: 50%
-
-@include breakpoint(desktopOnly)
-  .c-btn-submit
+  @include breakpoint(desktopOnly)
     font-size: 20px
     padding: 20px

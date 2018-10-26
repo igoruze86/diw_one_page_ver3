@@ -3,44 +3,12 @@
   display: block
   text-align: left
   padding: 7vw 4vw
-  p
-    font-weight: $light
-    color: $mineShaft
-    font-size: 4.7vw
-    letter-spacing: 0.1px
-    line-height: 1.4
-
-  &--bg1
-    background: $pampas
-
-  &--bg2
-    background: inherit
-
-@include breakpoint(tabletOnly)
-  .c-job-position-ad
+  @include breakpoint(tabletOnly)
     position: relative
     padding: 4vw 9vw
-    p
-      font-weight: $light
-      font-size: 1.6vw
-      line-height: 1.7
-      letter-spacing: 0.9px
-      max-width: 60%
 
-    &--bg1
-      background: inherit
-
-    &--bg2
-      background: $mineShaft
-      p
-        color: $gallery
-
-@include breakpoint(desktopOnly)
-  .c-job-position-ad
-    p
-      font-size: 15px
-      max-width: 50%
-    h3
+  h3
+    @include breakpoint(desktopOnly)
       position: relative
       &:before
         content: ''
@@ -53,12 +21,38 @@
       &:hover:before
         width: 100%
 
-    &--bg1
+  p
+    font-weight: $light
+    color: $mineShaft
+    font-size: 4.7vw
+    letter-spacing: 0.1px
+    line-height: 1.4
+    @include breakpoint(tabletOnly)
+      font-weight: $light
+      font-size: 1.6vw
+      line-height: 1.7
+      letter-spacing: 0.9px
+      max-width: 60%
+    @include breakpoint(desktopOnly)
+      font-size: 15px
+      max-width: 50%
+
+  &--bg1
+    background: $pampas
+    @include breakpoint(tabletOnly)
+      background: inherit
+    @include breakpoint(desktopOnly)
       h3
         &:before
           background: $mineShaft
 
-    &--bg2
+  &--bg2
+    background: inherit
+    @include breakpoint(tabletOnly)
+      background: $mineShaft
+      p
+        color: $gallery
+    @include breakpoint(desktopOnly)
       h3
         &:before
           background: $gallery

@@ -7,49 +7,42 @@
     line-height: 1.4
     list-style: disc
     padding: 5vw 0vw 10vw 10vw
+    @include breakpoint (tabletOnly)
+      font-size: 1.8vw
+      line-height: 1
+      padding: 0vw 0vw 2vw 4vw
+    @include breakpoint (desktopOnly)
+      font-size: 18px
+      padding: 0px 0px 50px 40px
     li
       padding: 2vw 0
+      @include breakpoint (tabletOnly)
+        padding: 1vw 0
+        line-height: 1.2
+      @include breakpoint (desktopOnly)
+        padding: 5px 0
+        line-height: 1.2
   p
     font-size: 4vw
     padding-top: 0
     letter-spacing: 1.1px
     padding-right: 1vw
     line-height: 2
-
-#italic
-  font-style: italic
-
-@include breakpoint (tabletOnly)
-  .b-job-req
-    ul
-      font-size: 1.8vw
-      line-height: 1
-      padding: 0vw 0vw 2vw 4vw
-      li
-        padding: 1vw 0
-        line-height: 1.2
-    p
+    @include breakpoint (tabletOnly)
       padding-top: 4vw
       font-size: 1.8vw
       letter-spacing: 1px
       line-height: 1.5
       font-weight: $light
-
-@include breakpoint (tabletOnly)
-  #italic
-    padding-top: 0vw
-
-@include breakpoint (desktopOnly)
-  .b-job-req
-    ul
-      font-size: 18px
-      padding: 0px 0px 50px 40px
-      li
-        padding: 5px 0
-        line-height: 1.2
-    p
+    @include breakpoint (desktopOnly)
       padding-top: 80px
       font-size: 18px
       letter-spacing: 1.5px
       line-height: 2
       font-weight: $light
+
+
+#italic
+  font-style: italic
+  @include breakpoint (tabletOnly)
+    padding-top: 0vw

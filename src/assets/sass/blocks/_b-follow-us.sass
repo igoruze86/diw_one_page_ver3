@@ -3,21 +3,15 @@
   width: 100%
   padding: 22vw 5vw 21vw 5vw
   text-align: center
-
+  @include breakpoint(tabletOnly)
+    padding: 10vw 5vw 8vw 5vw
+  @include breakpoint(desktopOnly)
+    padding: 80px 0
+    
   &__icons
     display: block
     margin-top: 11vw
-
-@include breakpoint(tabletOnly)
-  .b-follow-us
-    padding: 10vw 5vw 8vw 5vw
-
-    &__icons
+    @include breakpoint(tabletOnly)
       margin: 3vw
-
-@include breakpoint(desktopOnly)
-  .b-follow-us
-    padding: 80px 0
-
-    &__icons
+    @include breakpoint(desktopOnly)
       margin: 0

@@ -1,20 +1,17 @@
-@include breakpoint(tabletOnly)
-  .w-hp-location-wrapper
+.w-hp-location-wrapper
+  @include breakpoint(tabletOnly)
     display: flex
     flex-direction: row
-    justify-content: center
-
-@include breakpoint(desktopOnly)
-  .w-hp-location-wrapper
-      display: flex
-      flex-direction: row
-      justify-content: space-between
-      width: 100%
-      max-width: 1025px
-      margin: 0 auto
-      padding: 0px 20px
-
-@include breakpoint(desktopHD)
-  .w-hp-location-wrapper
+    justify-content: space-between
+    padding: 0 20px
+  @include breakpoint(desktopOnly)
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    width: 100%
+    max-width: 1025px
+    margin: 0 auto
+    padding: 0px 20px
+  @include breakpoint(desktopHD)
     max-width: 1300px
     margin: 0 auto

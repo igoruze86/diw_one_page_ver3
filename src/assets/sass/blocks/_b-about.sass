@@ -7,30 +7,21 @@
   p
     display: block
     text-align: left
-    padding: 0vw 8.3vw 2vw 5vw
+    padding: 0vw 8.3vw 8vw 5vw
     font-size: 5.7vw
     font-weight: $ultraLight
     color: $mineShaft
     line-height: 1.5
-
-@include breakpoint(tabletOnly)
-  .b-about
-    p
-      padding: 0vw 6vw 2vw 6vw
+    @include breakpoint(tabletOnly)
+      padding: 0vw 12vw 3vw 12vw
       font-size: 1.7vw
       letter-spacing: 0.1px
-
-@include breakpoint(desktopOnly)
-  .b-about
-    p
+    @include breakpoint(desktopOnly)
       max-width: 1025px
       font-size: 14px
       margin: 0 auto
-      padding: 0 10vw
+      padding: 0 13.5vw
       font-weight: $light
       line-height: 1.7
-
-@include breakpoint(desktopHD)
-  .b-about
-    p
-      padding: 0 5vw     
+    @include breakpoint(desktopHD)
+      padding: 0 5vw
