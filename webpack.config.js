@@ -114,7 +114,7 @@ module.exports = {
                   attrs: ['img:src', 'source:srcset', 'img:srcset']
               }
             }
-          }, 
+          },
      ]
    },
    watch: true,
