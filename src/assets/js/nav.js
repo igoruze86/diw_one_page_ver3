@@ -4,6 +4,7 @@ $('.c-icons-burger').click(function(){
   $(this).toggleClass('c-icons-burger-close');
 });
 
+
 // Hide nav menu on scroll
 var prevScroll = window.pageYOffset;
 var iconClose = $('.c-icons-burger');

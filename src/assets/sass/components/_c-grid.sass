@@ -1,0 +1,15 @@
+.grid-container
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  bottom: 0
+  grid-template-columns: auto auto auto auto auto
+  background-color: inherit
+  width: 100%
+  z-index: -1
+  @include breakpoint(tabletOnly)
+    display: grid
+
+.grid-item
+  border-right: 0.5px solid rgba(0, 0, 0, 0.1)

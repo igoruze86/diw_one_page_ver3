@@ -61,15 +61,20 @@
 
 
 .c-icons-burger
-  position: relative
+  position: absolute
   width: 30px
   height: 24px
-  float: right
-  margin-top: 8px
+  right: 20px
+  z-index: 1234
+  @include absolute (center-vertical)
+  // top: 10px
+  // float: right
+  // margin-top: 8px
+  // z-index: 1234
   @include breakpoint(phoneLandscape)
     width: 26px
     height: 20px
-    margin-top: 6px
+    // margin-top: 6px
   @include breakpoint(desktopOnly)
     display: none
 
@@ -80,6 +85,7 @@
     background: lighten($mineShaft, 10%)
     top: 0%
     transition: all ease 0.2s
+    z-index: 1234
 
   &-line2
     position: absolute
@@ -88,6 +94,7 @@
     background: lighten($mineShaft, 10%)
     top: 42%
     transition: all ease 0.2s
+    z-index: 1234
 
   &-line3
     position: absolute
@@ -96,21 +103,28 @@
     background: lighten($mineShaft, 10%)
     top: 85%
     transition: all ease 0.2s
+    z-index: 1234
 
 
 .c-icons-burger-close .c-icons-burger-line1
   transform: rotate(45deg)
   top: 42%
+  z-index: 1234
+  background: darken($silver, 30%)
 
 
 .c-icons-burger-close .c-icons-burger-line2
   transform: rotate(-45deg)
   top: 42%
+  z-index: 1234
+  background: darken($silver, 30%)
 
 
 .c-icons-burger-close .c-icons-burger-line3
   transform: rotate(-45deg)
   top: 42%
+  z-index: 1234
+  background: darken($silver, 30%)
 
 
 .c-icons-description
